@@ -1,0 +1,9 @@
+html, body {
+  position: relative;
+  margin: 0;
+  height: 100%;
+}
+
+body {
+  font: 15px/1.5 Helvetica;
+}

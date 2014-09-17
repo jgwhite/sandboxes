@@ -1,0 +1,24 @@
+{
+  "name": "sandbox",
+  "version": "0.0.0",
+  "description": "A little sandbox made with React.",
+  "repository": "https://github.com/jgwhite/sandboxes",
+  "scripts": {
+    "start": "./node_modules/.bin/broccoli serve",
+    "test": "./node_modules/.bin/testem ci"
+  },
+  "author": "jamie@jgwhite.co.uk",
+  "license": "MIT",
+  "devDependencies": {
+    "bower": "^1.3.10",
+    "broccoli": "^0.12.3",
+    "broccoli-browserify": "^0.1.0",
+    "broccoli-cli": "0.0.1",
+    "broccoli-merge-trees": "^0.1.4",
+    "broccoli-react": "^0.5.0",
+    "broccoli-static-compiler": "^0.1.4",
+    "react": "^0.11.2",
+    "react-tools": "^0.11.2",
+    "testem": "^0.6.19"
+  }
+}
