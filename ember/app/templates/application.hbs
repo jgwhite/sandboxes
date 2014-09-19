@@ -1,3 +1,16 @@
-<h2 id='title'>Welcome to Ember.js</h2>
-
-{{outlet}}
+<div class="pane" id="editor-pane">
+  <header>
+    <h1 class="pane-title">Editor</h1>
+  </header>
+  <main>
+    {{outlet "editor"}}
+  </main>
+</div>
+<div class="pane" id="viewer-pane">
+  <header>
+    <h1 class="pane-title">Viewer</h1>
+  </header>
+  <main>
+    {{outlet "viewer"}}
+  </main>
+</div>
