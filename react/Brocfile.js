@@ -1,11 +1,18 @@
-var browserify = require('broccoli-browserify');
-var mergeTrees = require('broccoli-merge-trees');
-var pickFiles  = require('broccoli-static-compiler');
-var reactify   = require('broccoli-react');
+var browserify    = require('broccoli-browserify');
+var mergeTrees    = require('broccoli-merge-trees');
+var pickFiles     = require('broccoli-static-compiler');
+var reactify      = require('broccoli-react');
+var unwatchedTree = require('broccoli-unwatched-tree');
 
 var common = pickFiles('../common', {
   srcDir: '/',
   destDir: 'assets'
+});
+
+var ace = unwatchedTree('bower_components/ace-builds/src-min-noconflict');
+ace = pickFiles(ace, {
+  srcDir: '/',
+  destDir: 'assets/ace'
 });
 
 var public = 'public';
@@ -30,4 +37,4 @@ var js = browserify(app, {
   outputFile: 'assets/app.js'
 });
 
-module.exports = mergeTrees([common, public, html, css, js]);
+module.exports = mergeTrees([common, ace, public, html, css, js]);

@@ -1,6 +1,7 @@
 /** @jsx React.DOM */
 
 var React = require('react');
+var AceEditor = require('./ace-editor');
 
 module.exports = React.createClass({
   displayName: 'Sandbox',
@@ -12,6 +13,7 @@ module.exports = React.createClass({
           <h1 className="pane-title">Editor</h1>
         </header>
         <main>
+          <AceEditor theme="github" mode="jsx" />
         </main>
       </section>
       <section className="pane" id="viewer-pane">

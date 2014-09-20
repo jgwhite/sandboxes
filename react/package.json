@@ -18,6 +18,7 @@
     "broccoli-merge-trees": "^0.1.4",
     "broccoli-react": "^0.5.0",
     "broccoli-static-compiler": "^0.1.4",
+    "broccoli-unwatched-tree": "^0.1.1",
     "react": "^0.11.2",
     "react-tools": "^0.11.2",
     "testem": "^0.6.19"
