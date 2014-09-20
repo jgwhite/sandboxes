@@ -1,3 +1,3 @@
 # Sandboxes
 
-A little sandbox application built in Ember & React.
+A tiny sandbox application in Ember & React.

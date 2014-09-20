@@ -3,6 +3,6 @@
   "version": "0.0.0",
   "homepage": "https://github.com/jgwhite/sandboxes",
   "authors": ["Jamie White <jamie@jgwhite.co.uk>"],
-  "description": "A little React sandbox application.",
+  "description": "A tiny React sandbox application.",
   "license": "MIT"
 }

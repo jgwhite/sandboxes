@@ -1,3 +1,3 @@
 # Sandbox
 
-A little sandbox app, built with React.
+A tiny React sandbox application.

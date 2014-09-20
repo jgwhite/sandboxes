@@ -1,7 +1,8 @@
 {
   "name": "sandbox",
   "version": "0.0.0",
-  "description": "A little sandbox made with React.",
+  "private": true,
+  "description": "A tiny React sandbox application.",
   "repository": "https://github.com/jgwhite/sandboxes",
   "scripts": {
     "start": "./node_modules/.bin/broccoli serve",
