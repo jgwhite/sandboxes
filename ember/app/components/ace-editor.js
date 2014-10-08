@@ -7,6 +7,10 @@ export default Ember.Component.extend({
     var element = this.get('element');
     var editor  = ace.edit(element);
 
+    editor.on('change', Ember.run.bind(this, function() {
+      this.set('value', editor.getValue());
+    }));
+
     this.set('editor', editor);
   }.on('didInsertElement'),
 
@@ -26,13 +30,24 @@ export default Ember.Component.extend({
   }.observes('editor', 'theme'),
 
   updateMode: function() {
-    var editor  = this.get('editor');
-    var mode    = this.get('mode');
+    var editor = this.get('editor');
+    var mode   = this.get('mode');
 
     if (editor && mode) {
       var session = editor.getSession();
 
       session.setMode('ace/mode/' + mode);
     }
-  }.observes('editor', 'mode')
+  }.observes('editor', 'mode'),
+
+  updateValue: function() {
+    var editor = this.get('editor');
+    var value  = this.get('value');
+
+    if (editor && value && value !== editor.getValue()) {
+      editor.setValue(value);
+      editor.clearSelection();
+      editor.moveCursorTo(0, 0);
+    }
+  }.observes('editor', 'value')
 });

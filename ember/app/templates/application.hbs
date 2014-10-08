@@ -1,16 +1,29 @@
+<div class="pane" id="browser-pane">
+  <header>
+    <h1 class="pane-title">Files</h1>
+  </header>
+  <main>
+    <ul class="file-list">
+      {{#each}}
+        <li>{{link-to name "file" this}}</li>
+      {{/each}}
+    </ul>
+  </main>
+</div>
+
 <div class="pane" id="editor-pane">
   <header>
     <h1 class="pane-title">Editor</h1>
   </header>
   <main>
-    {{ace-editor theme="github" mode="javascript"}}
+    {{outlet}}
   </main>
 </div>
+
 <div class="pane" id="viewer-pane">
   <header>
     <h1 class="pane-title">Viewer</h1>
   </header>
   <main>
-    {{outlet "viewer"}}
   </main>
 </div>
