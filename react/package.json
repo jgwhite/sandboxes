@@ -19,6 +19,7 @@
     "broccoli-react": "^0.5.0",
     "broccoli-static-compiler": "^0.2.0",
     "broccoli-unwatched-tree": "^0.1.1",
+    "lodash": "^2.4.1",
     "react": "^0.11.2",
     "react-router": "^0.9.3",
     "react-tools": "^0.11.2",

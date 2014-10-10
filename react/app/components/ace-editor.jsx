@@ -15,13 +15,13 @@ module.exports = React.createClass({
 
     this.editor = editor;
 
-    this.updateTheme();
-    this.updateMode();
+    this.componentDidUpdate();
   },
 
   componentDidUpdate: function() {
     this.updateTheme();
     this.updateMode();
+    this.updateValue();
   },
 
   componentWillUnmount: function() {
@@ -40,13 +40,24 @@ module.exports = React.createClass({
   },
 
   updateMode: function() {
-    var editor  = this.editor;
-    var mode    = this.props.mode;
+    var editor = this.editor;
+    var mode   = this.props.mode;
 
     if (editor && mode) {
       var session = editor.getSession();
 
       session.setMode('ace/mode/' + mode);
+    }
+  },
+
+  updateValue: function() {
+    var editor = this.editor;
+    var value  = this.props.value;
+
+    if (editor && value) {
+      editor.setValue(value);
+      editor.clearSelection();
+      editor.moveCursorTo(0, 0);
     }
   }
 });

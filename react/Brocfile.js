@@ -34,7 +34,10 @@ var css = pickFiles(app, {
 
 var js = browserify(app, {
   entries: ['./app.js'],
-  outputFile: 'assets/app.js'
+  outputFile: 'assets/app.js',
+  browserify: {
+    noParse: ['lodash']
+  }
 });
 
 module.exports = mergeTrees([common, ace, public, html, css, js]);
